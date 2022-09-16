@@ -1,5 +1,5 @@
-name: Generate Express App
-description: This is an action which can generate express app
+name: Create Express App
+description: This is an action which can create a new express app
 inputs:
   name:
     description: name of the express app to generate
