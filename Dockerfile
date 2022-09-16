@@ -4,7 +4,8 @@ WORKDIR /app
 
 # Copy project files
 COPY . .
+COPY entrypoint.sh /usr/local/bin
 
 RUN npm install
 
-CMD [ "./entrypoint.sh" ]
+ENTRYPOINT [ "entrypoint.sh" ]
