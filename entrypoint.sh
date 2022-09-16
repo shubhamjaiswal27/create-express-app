@@ -42,4 +42,4 @@ echo "build" >> .gitignore
 
 rm -rf node_modules
 
-cp -r ../templates/* .
+cp -r /templates/* .
