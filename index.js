@@ -4,7 +4,7 @@ import path from "path";
 
 const args = parseArgs(process.argv.slice(2));
 
-console.log(args)
+console.log("args---->>>", args)
 args.name = args.name || "api";
 args.version = args.version || "1.0.0";
 args.description = args.description || "";
