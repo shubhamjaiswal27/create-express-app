@@ -1,0 +1,26 @@
+{
+  "name": "create-express-app",
+  "version": "1.0.0",
+  "description": "this package creates express app",
+  "main": "index.js",
+  "keywords": [
+    "express",
+    "framework",
+    "web",
+    "rest",
+    "restful",
+    "router",
+    "app",
+    "api"
+  ],
+  "scripts": {
+    "build": "esbuild --bundle index.js --platform=node --outfile=dist/index.js",
+    "start": "npm run build && node dist/index.js"
+  },
+  "author": "Shubham Jaiswal",
+  "license": "MIT",
+  "dependencies": {
+    "esbuild": "^0.15.7",
+    "minimist": "^1.2.6"
+  }
+}

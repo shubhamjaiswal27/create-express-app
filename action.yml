@@ -1,0 +1,15 @@
+name: Generate Express App
+description: This is an action which can generate express app
+inputs:
+  name:
+    description: name of the express app to generate
+    required: true
+    default: api
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.name }}
+branding:
+  icon: code
+  color: orange
