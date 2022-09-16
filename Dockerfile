@@ -1,7 +1,5 @@
 FROM node:18
 
-COPY . .
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
-RUN npm install
-
-ENTRYPOINT [ "./entrypoint.sh" ]
+ENTRYPOINT [ "entrypoint.sh" ]

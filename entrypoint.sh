@@ -2,30 +2,36 @@
 
 set -e
 
-# INPUT_NAME=api
 # delete the project directory if it already exists
 rm -rf $INPUT_NAME
-
-echo $INPUT_NAME
-echo "this directory"
-pwd
 
 # create the project directory
 mkdir $INPUT_NAME
 
+PACKAGEJSON=$(cat <<-EOM
+{
+    "name": "${INPUT_NAME}",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "build": "esbuild --bundle src/index.js --platform=node --external:./node_modules/* --outfile=build/bundle.js",
+        "start": "npm run build & node build/bundle.js",
+        "dev": "npm run watch & nodemon build/bundle.js",
+        "watch": "npm run build -- --watch",
+        "test": "mocha -r esbuild-runner/register ./tests/*.spec.js --exit"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT"
+}
+EOM
+)
 
-
-echo "input directory"
-ls -la
-
-# generate package.json
-npm start -- --name="${INPUT_NAME}"
+echo "$PACKAGEJSON" > $INPUT_NAME/package.json
 
 # change into the project directory
 cd $INPUT_NAME
 
-echo "pwd directory"
-pwd
 # install dependencies
 npm install --save body-parser express
 npm install --save-dev dotenv mocha chai esbuild supertest esbuild-runner nodemon
