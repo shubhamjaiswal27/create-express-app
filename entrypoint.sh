@@ -11,14 +11,19 @@ pwd
 # create the project directory
 mkdir $INPUT_NAME
 
-# change into the project directory
-cd $INPUT_NAME
+
 
 echo "input directory"
-pwd
+ls -la
+
 # generate package.json
 npm start -- --name="${INPUT_NAME}"
 
+# change into the project directory
+cd $INPUT_NAME
+
+echo "pwd directory"
+pwd
 # install dependencies
 npm install --save body-parser express
 npm install --save-dev dotenv mocha chai esbuild supertest esbuild-runner nodemon
