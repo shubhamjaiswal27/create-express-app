@@ -7,4 +7,4 @@ COPY . .
 
 RUN npm install
 
-ENTRYPOINT [ "./entrypoint.sh" ]
+ENTRYPOINT [ "entrypoint.sh" ]
