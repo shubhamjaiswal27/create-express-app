@@ -1,3 +1,3 @@
-## Generate Express App
+## Create Express App
 
-This is an action which can generate express app
+This is an action which can create new express app
