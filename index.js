@@ -11,7 +11,6 @@ args.description = args.description || "";
 
 const WORKING_DIR = path.join(__dirname, "..", args.name);
 
-console.log(WORKING_DIR);
 
 const generatePackageJson = () => {
     const packageJson = {
@@ -29,7 +28,7 @@ const generatePackageJson = () => {
         author: "",
         license: "MIT"
     }
-
+    console.log("console log", WORKING_DIR);
     fs.writeFileSync(path.join(WORKING_DIR, 'package.json'), JSON.stringify(packageJson, null, 2), { flag: 'wx' });
 }
 
