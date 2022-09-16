@@ -2,9 +2,11 @@
 
 set -e
 
+# INPUT_NAME=api
 # delete the project directory if it already exists
 rm -rf $INPUT_NAME
 
+echo $INPUT_NAME
 echo "this directory"
 pwd
 
