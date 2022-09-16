@@ -11,6 +11,8 @@ args.description = args.description || "";
 
 const WORKING_DIR = path.join(__dirname, "..", args.name);
 
+console.log(WORKING_DIR);
+
 const generatePackageJson = () => {
     const packageJson = {
         name: args.name,

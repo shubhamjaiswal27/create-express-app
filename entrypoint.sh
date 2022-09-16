@@ -5,12 +5,15 @@ set -e
 # delete the project directory if it already exists
 rm -rf $INPUT_NAME
 
+pwd
+
 # create the project directory
 mkdir $INPUT_NAME
 
 # change into the project directory
 cd $INPUT_NAME
 
+pwd
 # generate package.json
 npm start -- --name="${INPUT_NAME}"
 
