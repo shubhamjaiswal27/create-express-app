@@ -1,11 +1,6 @@
 FROM node:18
 
-WORKDIR /app
-
-# Copy project files
-COPY . ./
-
-RUN ls -la
+COPY . .
 
 RUN npm install
 
